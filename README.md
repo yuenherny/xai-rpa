@@ -1,4 +1,4 @@
-# Robotic Process Automation for Python
+# Robotic Process Automation for Xircuits
 This component library is for developers to use Xircuits with Python's open source RPA packages.
 
 **Note: This is a work in progress at the moment. Some RPA functionalities might not be supported.**
