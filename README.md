@@ -4,7 +4,7 @@ This component library is for developers to use Xircuits with Python's open sour
 **Note: This is a work in progress at the moment. Some RPA functionalities might not be supported.**
 
 ## Supported RPA packages:
-- [Tebelorg RPA-Python](https://github.com/tebelorg/RPA-Python)
+- [Tebelorg RPA-Python](https://github.com/tebelorg/RPA-Python)>=1.48.0
 
 ## Prerequisites
 Before you start, please refer to this [guide](https://xircuits.io/docs/Installation) to set up Xircuits.
