@@ -12,18 +12,11 @@ Before you start, please refer to this [guide](https://xircuits.io/docs/Installa
 ## Installation
 To use this component library, simply copy the directory / clone or submodule this repository to your working Xircuits project directory.
 
-1. In `xai_components/xai_rpa` directory, clone:
+1. At your project root:
     ```
-    $ cd xai_components/xai_rpa
-    $ git clone https://github.com/yuenherny/xai-rpa
+    $ git clone https://github.com/yuenherny/xai-rpa.git
     ```
-    or at project root with Python environment activated, run:
+2. Install the required dependencies for RPA to work:
     ```
-    $ pip install xircuits
-    $ xircuits-components --sublib rpa
-    ```
-2. At project root, install the required dependencies for RPA to work:
-    ```
-    $ cd ../..
-    $ pip install -r xai_components/xai_rpa/requirements.txt
+    pip install -r <PATH/TO/XAI-RPA>/requirements.txt
     ```
