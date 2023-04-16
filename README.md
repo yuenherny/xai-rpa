@@ -20,3 +20,14 @@ To use this component library, simply copy the directory / clone or submodule th
     ```
     pip install -r <PATH/TO/XAI-RPA>/requirements.txt
     ```
+
+## Examples
+This section provides brief explanation and things to take note of in selected examples.
+
+### RpaClickAndHover
+This example demonstrates left click and hover capability of the RPA bot.
+
+1. The element identifiers used in this example are:
+    - HTML `title`: Text button
+    - HTML `href`: Image button
+2. The **hover** action is on the GitHub icon at the bottom of the webpage.

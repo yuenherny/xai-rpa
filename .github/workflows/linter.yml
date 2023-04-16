@@ -4,7 +4,7 @@ jobs:
   linting:
     strategy:
       matrix:
-        os: [window-latest, macos-latest, ubuntu-latest]
+        os: [windows-latest, macos-latest, ubuntu-latest]
     runs-on: ${{ matrix.os }}
     name: Linting
     steps:
