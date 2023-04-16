@@ -56,8 +56,11 @@ class RpaClick(Component):
         print(f"Clicking element {element}...")
         
         import rpa as r
-        r.click(element_identifier=element)
-        print(f"Clicked element {element}.")
+        try:
+            r.click(element_identifier=element)
+            print(f"Clicked element {element}.")
+        except Exception as error:
+            print(f"{error}")
 
         self.done = False
 
@@ -87,8 +90,11 @@ class RpaRclick(Component):
         print(f"Right clicking element {element}...")
         
         import rpa as r
-        r.rclick(element_identifier=element)
-        print(f"Right clicked element {element}.")
+        try:
+            r.rclick(element_identifier=element)
+            print(f"Right clicked element {element}.")
+        except Exception as error:
+            print(f"{error}")
 
         self.done = False
 
@@ -118,8 +124,11 @@ class RpaDclick(Component):
         print(f"Double clicking element {element}...")
         
         import rpa as r
-        r.dclick(element_identifier=element)
-        print(f"Double clicked element {element}.")
+        try:
+            r.dclick(element_identifier=element)
+            print(f"Double clicked element {element}.")
+        except Exception as error:
+            print(f"{error}")
 
         self.done = False
 
@@ -146,10 +155,13 @@ class RpaHover(Component):
 
     def execute(self, ctx) -> None:
         element = self.element.value
-        print(f"Clicking element {element}...")
+        print(f"Hovering on element {element}...")
         
         import rpa as r
-        r.hover(element_identifier=element)
-        print(f"Clicked element {element}.")
+        try:
+            r.hover(element_identifier=element)
+            print(f"Hovered on element {element}.")
+        except Exception as error:
+            print(f"{error}")
 
         self.done = False
