@@ -38,9 +38,11 @@ class RpaClick(Component):
 
     ### Reference:
     - [RPA-Python Basic Functions](https://github.com/tebelorg/RPA-Python#basic-functions)
+    - [Element Identifier](https://github.com/tebelorg/RPA-Python#element-identifiers)
 
     ##### inPorts:
-    - element: Path to visual example of an element to be clicked (images).
+    - element: Path to visual example of an element to be clicked (images), or web element identifier 
+        (XPath selector, CSS selector, id, name, class, title, aria-label, text(), href).
         Default: None
 
     ##### outPorts:
@@ -72,9 +74,11 @@ class RpaRclick(Component):
 
     ### Reference:
     - [RPA-Python Basic Functions](https://github.com/tebelorg/RPA-Python#basic-functions)
+    - [Element Identifier](https://github.com/tebelorg/RPA-Python#element-identifiers)
 
     ##### inPorts:
-    - element: Path to visual example of an element to be right clicked (images).
+    - element: Path to visual example of an element to be clicked (images), or web element identifier 
+        (XPath selector, CSS selector, id, name, class, title, aria-label, text(), href).
         Default: None
 
     ##### outPorts:
@@ -106,9 +110,11 @@ class RpaDclick(Component):
 
     ### Reference:
     - [RPA-Python Basic Functions](https://github.com/tebelorg/RPA-Python#basic-functions)
+    - [Element Identifier](https://github.com/tebelorg/RPA-Python#element-identifiers)
 
     ##### inPorts:
-    - element: Path to visual example of an element to be double clicked (images).
+    - element: Path to visual example of an element to be clicked (images), or web element identifier 
+        (XPath selector, CSS selector, id, name, class, title, aria-label, text(), href).
         Default: None
 
     ##### outPorts:
@@ -140,9 +146,11 @@ class RpaHover(Component):
 
     ### Reference:
     - [RPA-Python Basic Functions](https://github.com/tebelorg/RPA-Python#basic-functions)
+    - [Element Identifier](https://github.com/tebelorg/RPA-Python#element-identifiers)
 
     ##### inPorts:
-    - element: Path to visual example of an element to hover on (images).
+    - element: Path to visual example of an element to be clicked (images), or web element identifier 
+        (XPath selector, CSS selector, id, name, class, title, aria-label, text(), href).
         Default: None
 
     ##### outPorts:
