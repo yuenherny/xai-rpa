@@ -1,9 +1,10 @@
-from xai_components.base import InArg, OutArg, Component, xai_component
+from xai_components.base import Component, InArg, xai_component
+
 
 @xai_component
 class RpaInit(Component):
     """Initiates RPA bot.
-    
+
     ### Reference:
     - [RPA-Python Core Functions](https://github.com/tebelorg/RPA-Python#core-functions)
 
@@ -33,17 +34,18 @@ class RpaInit(Component):
         chrome = self.chrome.value
         turbo = self.turbo.value
         print(f"Visual automation: {visual}, Chrome: {chrome}, Turbo: {turbo}")
-        
+
         import rpa as r
         r.init(visual_automation=visual, chrome_browser=chrome, turbo_mode=turbo)
         print("Bot initiated.")
 
         self.done = False
 
+
 @xai_component
 class RpaClose(Component):
     """Shutsdown the RPA bot.
-    
+
     ### Reference:
     - [RPA-Python Core Functions](https://github.com/tebelorg/RPA-Python#core-functions)
 
@@ -62,11 +64,12 @@ class RpaClose(Component):
         r.close()
 
         self.done = False
-        
+
+
 @xai_component
 class RpaError(Component):
     """Raises exception on error.
-    
+
     ### Reference:
     - [RPA-Python Core Functions](https://github.com/tebelorg/RPA-Python#core-functions)
 
@@ -85,17 +88,18 @@ class RpaError(Component):
 
     def execute(self, ctx) -> None:
         raise_exception = self.raise_exception.value
-        
+
         import rpa as r
         r.error(raise_exception)
         print("Exception will be raised on error.")
 
         self.done = False
-        
+
+
 @xai_component
 class RpaDebug(Component):
     """Print & log debug info to `rpa_python.log`.
-    
+
     ### Reference:
     - [RPA-Python Core Functions](https://github.com/tebelorg/RPA-Python#core-functions)
 
@@ -114,7 +118,7 @@ class RpaDebug(Component):
 
     def execute(self, ctx) -> None:
         debug_log = self.debug_log.value
-        
+
         import rpa as r
         r.debug(debug_log)
         print("Debug info will be logged to `rpa_python.log`.")
