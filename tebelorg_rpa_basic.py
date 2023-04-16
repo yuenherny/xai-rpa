@@ -1,9 +1,10 @@
-from xai_components.base import InArg, OutArg, Component, xai_component
+from xai_components.base import Component, InArg, xai_component
+
 
 @xai_component
 class RpaUrl(Component):
     """Opens the browser with specified URL.
-    
+
     ### Reference:
     - [RPA-Python Basic Functions](https://github.com/tebelorg/RPA-Python#basic-functions)
 
@@ -23,7 +24,7 @@ class RpaUrl(Component):
     def execute(self, ctx) -> None:
         url = self.url.value
         print(f"Opening {url} on browser...")
-        
+
         import rpa as r
         r.url(webpage_url=url)
         print(f"Browser opened with URL {url}.")
@@ -34,7 +35,7 @@ class RpaUrl(Component):
 @xai_component
 class RpaClick(Component):
     """Click on an element.
-    
+
     ### Reference:
     - [RPA-Python Basic Functions](https://github.com/tebelorg/RPA-Python#basic-functions)
 
@@ -54,7 +55,7 @@ class RpaClick(Component):
     def execute(self, ctx) -> None:
         element = self.element.value
         print(f"Clicking element {element}...")
-        
+
         import rpa as r
         try:
             r.click(element_identifier=element)
@@ -68,7 +69,7 @@ class RpaClick(Component):
 @xai_component
 class RpaRclick(Component):
     """Right click on an element.
-    
+
     ### Reference:
     - [RPA-Python Basic Functions](https://github.com/tebelorg/RPA-Python#basic-functions)
 
@@ -88,7 +89,7 @@ class RpaRclick(Component):
     def execute(self, ctx) -> None:
         element = self.element.value
         print(f"Right clicking element {element}...")
-        
+
         import rpa as r
         try:
             r.rclick(element_identifier=element)
@@ -102,7 +103,7 @@ class RpaRclick(Component):
 @xai_component
 class RpaDclick(Component):
     """Double click on an element.
-    
+
     ### Reference:
     - [RPA-Python Basic Functions](https://github.com/tebelorg/RPA-Python#basic-functions)
 
@@ -122,7 +123,7 @@ class RpaDclick(Component):
     def execute(self, ctx) -> None:
         element = self.element.value
         print(f"Double clicking element {element}...")
-        
+
         import rpa as r
         try:
             r.dclick(element_identifier=element)
@@ -136,7 +137,7 @@ class RpaDclick(Component):
 @xai_component
 class RpaHover(Component):
     """Hover on an element.
-    
+
     ### Reference:
     - [RPA-Python Basic Functions](https://github.com/tebelorg/RPA-Python#basic-functions)
 
@@ -156,7 +157,7 @@ class RpaHover(Component):
     def execute(self, ctx) -> None:
         element = self.element.value
         print(f"Hovering on element {element}...")
-        
+
         import rpa as r
         try:
             r.hover(element_identifier=element)

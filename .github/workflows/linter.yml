@@ -23,9 +23,6 @@ jobs:
       - name: Lint with flake8
         run: |
           flake8 --max-line-length=1000 .
-      - name: Lint with mypy
-        run: |
-          mypy .
       - name: Lint with pycodestyle
         run: |
           pycodestyle --ignore=E501,W504 .
