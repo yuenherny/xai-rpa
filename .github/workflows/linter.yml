@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install isort flake8 mypy pycodestyle
+          pip install isort flake8 pycodestyle
       - name: Lint with isort
         run: |
           isort --check-only --diff .
