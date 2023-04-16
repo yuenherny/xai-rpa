@@ -41,7 +41,7 @@ class RpaClick(Component):
     - [Element Identifier](https://github.com/tebelorg/RPA-Python#element-identifiers)
 
     ##### inPorts:
-    - element: Path to visual example of an element to be clicked (images), or web element identifier 
+    - element: Path to visual example of an element to be clicked (images), or web element identifier
         (XPath selector, CSS selector, id, name, class, title, aria-label, text(), href).
         Default: None
 
@@ -77,7 +77,7 @@ class RpaRclick(Component):
     - [Element Identifier](https://github.com/tebelorg/RPA-Python#element-identifiers)
 
     ##### inPorts:
-    - element: Path to visual example of an element to be clicked (images), or web element identifier 
+    - element: Path to visual example of an element to be clicked (images), or web element identifier
         (XPath selector, CSS selector, id, name, class, title, aria-label, text(), href).
         Default: None
 
@@ -113,7 +113,7 @@ class RpaDclick(Component):
     - [Element Identifier](https://github.com/tebelorg/RPA-Python#element-identifiers)
 
     ##### inPorts:
-    - element: Path to visual example of an element to be clicked (images), or web element identifier 
+    - element: Path to visual example of an element to be clicked (images), or web element identifier
         (XPath selector, CSS selector, id, name, class, title, aria-label, text(), href).
         Default: None
 
@@ -149,7 +149,7 @@ class RpaHover(Component):
     - [Element Identifier](https://github.com/tebelorg/RPA-Python#element-identifiers)
 
     ##### inPorts:
-    - element: Path to visual example of an element to be clicked (images), or web element identifier 
+    - element: Path to visual example of an element to be clicked (images), or web element identifier
         (XPath selector, CSS selector, id, name, class, title, aria-label, text(), href).
         Default: None
 
