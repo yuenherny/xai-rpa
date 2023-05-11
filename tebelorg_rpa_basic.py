@@ -17,10 +17,6 @@ class RpaUrl(Component):
     """
     url: InArg[str]
 
-    def __init__(self):
-        self.url = InArg.empty()
-        self.done = False
-
     def execute(self, ctx) -> None:
         url = self.url.value
         print(f"Opening {url} on browser...")
@@ -28,8 +24,6 @@ class RpaUrl(Component):
         import rpa as r
         r.url(webpage_url=url)
         print(f"Browser opened with URL {url}.")
-
-        self.done = False
 
 
 @xai_component
@@ -50,10 +44,6 @@ class RpaClick(Component):
     """
     element: InArg[str]
 
-    def __init__(self):
-        self.element = InArg.empty()
-        self.done = False
-
     def execute(self, ctx) -> None:
         element = self.element.value
         print(f"Clicking element {element}...")
@@ -64,8 +54,6 @@ class RpaClick(Component):
             print(f"Clicked element {element}.")
         except Exception as error:
             print(f"{error}")
-
-        self.done = False
 
 
 @xai_component
@@ -86,10 +74,6 @@ class RpaRclick(Component):
     """
     element: InArg[str]
 
-    def __init__(self):
-        self.element = InArg.empty()
-        self.done = False
-
     def execute(self, ctx) -> None:
         element = self.element.value
         print(f"Right clicking element {element}...")
@@ -100,8 +84,6 @@ class RpaRclick(Component):
             print(f"Right clicked element {element}.")
         except Exception as error:
             print(f"{error}")
-
-        self.done = False
 
 
 @xai_component
@@ -122,10 +104,6 @@ class RpaDclick(Component):
     """
     element: InArg[str]
 
-    def __init__(self):
-        self.element = InArg.empty()
-        self.done = False
-
     def execute(self, ctx) -> None:
         element = self.element.value
         print(f"Double clicking element {element}...")
@@ -136,8 +114,6 @@ class RpaDclick(Component):
             print(f"Double clicked element {element}.")
         except Exception as error:
             print(f"{error}")
-
-        self.done = False
 
 
 @xai_component
@@ -158,10 +134,6 @@ class RpaHover(Component):
     """
     element: InArg[str]
 
-    def __init__(self):
-        self.element = InArg.empty()
-        self.done = False
-
     def execute(self, ctx) -> None:
         element = self.element.value
         print(f"Hovering on element {element}...")
@@ -172,5 +144,3 @@ class RpaHover(Component):
             print(f"Hovered on element {element}.")
         except Exception as error:
             print(f"{error}")
-
-        self.done = False

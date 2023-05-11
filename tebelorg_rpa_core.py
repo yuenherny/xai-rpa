@@ -24,10 +24,10 @@ class RpaInit(Component):
     turbo: InArg[bool]
 
     def __init__(self):
-        self.visual = InArg(False)
-        self.chrome = InArg(True)
-        self.turbo = InArg(False)
-        self.done = False
+        super().__init__()
+        self.visual.value = False
+        self.chrome.value = True
+        self.turbo.value = False
 
     def execute(self, ctx) -> None:
         visual = self.visual.value
@@ -38,8 +38,6 @@ class RpaInit(Component):
         import rpa as r
         r.init(visual_automation=visual, chrome_browser=chrome, turbo_mode=turbo)
         print("Bot initiated.")
-
-        self.done = False
 
 
 @xai_component
@@ -55,15 +53,11 @@ class RpaClose(Component):
     ##### outPorts:
     - None
     """
-    def __init__(self):
-        self.done = False
 
     def execute(self, ctx) -> None:
         print("Closing RPA...")
         import rpa as r
         r.close()
-
-        self.done = False
 
 
 @xai_component
@@ -83,17 +77,14 @@ class RpaError(Component):
     raise_exception: InArg[bool]
 
     def __init__(self):
-        self.raise_exception = InArg(False)
-        self.done = False
+        super().__init__()
+        self.raise_exception.value = False
 
     def execute(self, ctx) -> None:
-        raise_exception = self.raise_exception.value
 
         import rpa as r
-        r.error(raise_exception)
+        r.error(self.raise_exception.value)
         print("Exception will be raised on error.")
-
-        self.done = False
 
 
 @xai_component
@@ -113,14 +104,11 @@ class RpaDebug(Component):
     debug_log: InArg[bool]
 
     def __init__(self):
-        self.debug_log = InArg(True)
-        self.done = False
+        super().__init__()
+        self.debug_log.value = True
 
     def execute(self, ctx) -> None:
-        debug_log = self.debug_log.value
 
         import rpa as r
-        r.debug(debug_log)
+        r.debug(self.debug_log.value)
         print("Debug info will be logged to `rpa_python.log`.")
-
-        self.done = False
