@@ -85,6 +85,7 @@ class RpaRclick(Component):
         except Exception as error:
             print(f"{error}")
 
+
 @xai_component
 class RpaDclick(Component):
     """Double click on an element.

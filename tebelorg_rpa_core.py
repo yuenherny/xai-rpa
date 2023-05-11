@@ -39,6 +39,7 @@ class RpaInit(Component):
         r.init(visual_automation=visual, chrome_browser=chrome, turbo_mode=turbo)
         print("Bot initiated.")
 
+
 @xai_component
 class RpaClose(Component):
     """Shutsdown the RPA bot.
@@ -57,6 +58,7 @@ class RpaClose(Component):
         print("Closing RPA...")
         import rpa as r
         r.close()
+
 
 @xai_component
 class RpaError(Component):
